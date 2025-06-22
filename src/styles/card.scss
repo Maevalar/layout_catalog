@@ -3,22 +3,28 @@
 main {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat($column-count, 200px);
+  grid-template-columns: repeat(4, 200px);
   gap: 48px;
   row-gap: 46px;
   padding: 50px 40px;
 }
 
 @media (max-width: 768px) {
-  $column-count: 3;
+  main{
+    grid-template-columns: repeat(3, 200px);
+  }
 }
 
 @media (max-width: 488px) {
-  $column-count: 2;
+  main{
+    grid-template-columns: repeat(2, 200px);
+  }
 }
 
 @media (min-width: 488px) {
-  $column-count: 1;
+  main{
+    grid-template-columns: repeat(1, 200px);
+  }
 }
 
 .card {
